@@ -6,7 +6,24 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ccd5cd7-51eb-4e07-af60-ec9a0d3796f2" name="Default Changelist" comment="" />
+    <list default="true" id="4ccd5cd7-51eb-4e07-af60-ec9a0d3796f2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xut/crud/bean/Msg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index2.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xut/crud/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xut/crud/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM01/WEB-INF/classes/com/xut/crud/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM01/WEB-INF/classes/com/xut/crud/controller/EmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM01/WEB-INF/classes/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM01/WEB-INF/classes/mapper/EmployeeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM01/WEB-INF/views/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM01/WEB-INF/views/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM01/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM01/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xut/crud/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xut/crud/controller/EmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/EmployeeMapper.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,11 +48,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
+        <option value="Class" />
         <option value="Tag Library Descriptor" />
         <option value="Jsp File" />
-        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -57,7 +77,11 @@
     <option name="vmOptions" value="-Darchetype=Internal" />
   </component>
   <component name="ProjectId" id="1TERSs0KSspSEVSshAU15kG7buR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/static/js" />
@@ -297,9 +321,9 @@
       <item itemvalue="JUnit.MapperTest" />
       <item itemvalue="JUnit.MapperTest.testCRUD" />
       <item itemvalue="JUnit.MVCtest.testPage" />
+      <item itemvalue="JUnit.MVCtest" />
       <item itemvalue="Tomcat Server.tomcat9" />
       <item itemvalue="Tomcat Server.list.jsp" />
-      <item itemvalue="JUnit.MVCtest" />
     </list>
     <recent_temporary>
       <list>
@@ -325,10 +349,22 @@
       <workItem from="1573089573536" duration="1444000" />
       <workItem from="1573091475493" duration="39468000" />
       <workItem from="1573276926361" duration="5638000" />
+      <workItem from="1573299117642" duration="16545000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

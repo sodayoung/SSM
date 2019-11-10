@@ -1,4 +1,6 @@
-<%--
+<%@ page import="com.github.pagehelper.PageInfo" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.xut.crud.bean.Employee" %><%--
   Created by IntelliJ IDEA.
   User: Administrator
   Date: 2019/11/7
@@ -13,10 +15,16 @@
 <html>
 <head>
     <title>员工列表</title>
+    <style type="text/css">
+        .exp1{ width:12px}
+    </style>
     <%
         String path = request.getContextPath();
         String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
         System.out.println(basePath);
+
+        pageContext.setAttribute("path", request.getContextPath());
+
     %>
 </head>
 <script type="text/javascript" src="<%=basePath%>/static/js/jquery-1.8.3.js"></script>
@@ -56,14 +64,15 @@
                             <th>${emp.gender=="M"?"男":"女"}</th>
                             <th>${emp.email}</th>
                             <th>${emp.department.deptName}</th>
+                           <%-- <th>${emp.dId=="1"?"开发部":"测试部"}</th>--%>
                             <th>
                                 <button class="btn btn-primary btn-sm">
                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"/>
-                                    编辑
+                                    <span class="exp1" >编辑</span>
                                 </button>
                                 <button class="btn btn-danger btn-sm" >
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"/>
-                                    删除
+                                    <span class="exp1" >删除</span>
                                 </button>
                             </th>
 
@@ -76,35 +85,54 @@
         <div class="row">
             <%--分页文字信息--%>
             <div class="col-md-6">
-                当前记录数111111
+                当前${pageInfo.pageNum}页,总${pageInfo.pages}页,总${pageInfo.total}条记录
             </div>
 
             <%--分页信息条--%>
             <div class="col-md-6">
                 <nav aria-label="Page navigation">
                     <ul class="pagination">
-                        <li><a href="#">首页</a></li>
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                        <li><a href="#">末页</a></li>
+                        <li><a href="${path}/emps?pn=1">首页</a></li>
+                        <c:if test="${pageInfo.hasPreviousPage}">
+                            <li>
+                                <a href="${path}/emps?pn=${pageInfo.pageNum-1}" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                        </c:if>
+
+                        <c:forEach items="${pageInfo.navigatepageNums}" var="page_Num">
+                            <c:if test="${page_Num==pageInfo.pageNum}">
+                                <li class="active"><a href="#">${page_Num}</a></li>
+                            </c:if>
+                            <c:if test="${page_Num!=pageInfo.pageNum}">
+                                <li ><a href="${path }/emps?pn=${page_Num }">${page_Num }</a></li>
+                            </c:if>
+                        </c:forEach>
+                        <c:if test="${pageInfo.hasNextPage}">
+                            <li>
+                                <a href="${path}/emps?pn=${pageInfo.pageNum+1}" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </c:if>
+                        <li><a href="${path}/emps?pn=${pageInfo.pages}">末页</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-
     </div>
+<%--<%
+    PageInfo pi = (PageInfo) request.getAttribute("pageInfo");
+    List<Employee> list = pi.getList();
+    if (!list.isEmpty()){
+        for (Employee employee:list) {
+            System.out.println(employee.getDepartment().getDeptId()+"----------");
+        }
+    }else {
+        System.out.println("空");
+    }
+
+%>--%>
 </body>
 </html>
